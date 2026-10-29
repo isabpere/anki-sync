@@ -37,14 +37,14 @@ import urllib.request
 # To add another tab later, copy a whole { ... }, block and change the values.
 SHEETS = [
     {   # Tab 1 - your first vocabulary list
-        "link":         "PASTE_LINK_OF_TAB_1_HERE",
-        "deck":         "PUT_YOUR_EXISTING_DECK_NAME_HERE",
-        "reverse_deck": "PUT_YOUR_EXISTING_REVERSE_DECK_NAME_HERE",
+        "link":         "https://docs.google.com/spreadsheets/d/e/2PACX-1vRgKZkoAmze0Krz-9byg0wHvxhOjjdbUH4lAopG_nHufZ4EJyTiFv8dT0XrfdqOKuPFGX4-OxwxlkJ1/pub?gid=0&single=true&output=csv",
+        "deck":         "Vokabeln",
+        "reverse_deck": "Vokabeln umgekehrt",
     },
     {   # Tab 2 - the new vocabulary list
-        "link":         "PASTE_LINK_OF_TAB_2_HERE",
-        "deck":         "PUT_DECK_NAME_FOR_TAB_2_HERE",
-        "reverse_deck": "PUT_REVERSE_DECK_NAME_FOR_TAB_2_HERE",
+        "link":         "https://docs.google.com/spreadsheets/d/e/2PACX-1vRgKZkoAmze0Krz-9byg0wHvxhOjjdbUH4lAopG_nHufZ4EJyTiFv8dT0XrfdqOKuPFGX4-OxwxlkJ1/pub?gid=100&single=true&output=csv",
+        "deck":         "Vokabeln HP2",
+        "reverse_deck": "Vokabeln HP2 umgekehrt",
     },
 ]
 
