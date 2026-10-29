@@ -1,10 +1,8 @@
 name: Anki sync
 
 on:
-  # "Run workflow" button (GitHub app or website)
   workflow_dispatch:
-  # Automatic run every day at 06:00 German winter time / 07:00 summer time.
-  # Delete these two lines if you only want to run it with the button.
+  # Automatic run every day
   schedule:
     - cron: "0 5 * * *"
 
