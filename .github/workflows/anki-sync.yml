@@ -1,0 +1,31 @@
+name: Anki sync
+
+on:
+  # "Run workflow" button (GitHub app or website)
+  workflow_dispatch:
+  # Automatic run every day at 06:00 German winter time / 07:00 summer time.
+  # Delete these two lines if you only want to run it with the button.
+  schedule:
+    - cron: "0 5 * * *"
+
+concurrency: anki-sync
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Anki
+        run: pip install anki
+
+      - name: Add new words to AnkiWeb
+        run: python anki_cloud_sync.py
+        env:
+          ANKIWEB_USERNAME: ${{ secrets.ANKIWEB_USERNAME }}
+          ANKIWEB_PASSWORD: ${{ secrets.ANKIWEB_PASSWORD }}
